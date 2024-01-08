@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on darwin)" generated="20240103 15:21:43.185" rpa="false" schemaversion="3">
+<suite id="s1" name="googleTestes" source="/Users/kellycristina/robotFramework/testes/googleTestes.robot">
+<test id="s1-t1" name="Caso de teste - Acesso ao menu da amazon" line="10">
+<kw name="Nova sessão" library="baseSteps" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 15:21:43.750" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.com.br/prime'.</msg>
+<msg timestamp="20240103 15:21:43.783" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240103 15:21:43.785" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+</msg>
+<status status="FAIL" starttime="20240103 15:21:43.749" endtime="20240103 15:21:43.825"/>
+</kw>
+<status status="FAIL" starttime="20240103 15:21:43.749" endtime="20240103 15:21:43.828"/>
+</kw>
+<kw name="Encerrar Sessão" library="baseSteps" type="TEARDOWN">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Encerrando Sessão</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240103 15:21:43.832" endtime="20240103 15:21:43.833"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240103 15:21:43.835" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20240103 15:21:43.833" endtime="20240103 15:21:43.836"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20240103 15:21:43.837" endtime="20240103 15:21:43.837"/>
+</kw>
+<status status="PASS" starttime="20240103 15:21:43.830" endtime="20240103 15:21:43.838"/>
+</kw>
+<status status="FAIL" starttime="20240103 15:21:43.748" endtime="20240103 15:21:43.839">Setup failed:
+WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+</status>
+</test>
+<status status="FAIL" starttime="20240103 15:21:43.200" endtime="20240103 15:21:43.841"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="googleTestes">googleTestes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

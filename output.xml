@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on darwin)" generated="20240103 23:26:37.690" rpa="false" schemaversion="3">
+<suite id="s1" name="googleTestes" source="/Users/kellycristina/robotFramework/testes/googleTestes.robot">
+<test id="s1-t1" name="Caso de teste - Acesso ao menu da amazon" line="9">
+<kw name="Nova sessão" library="baseSteps" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 23:26:38.614" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.com.br/prime'.</msg>
+<status status="PASS" starttime="20240103 23:26:38.613" endtime="20240103 23:26:53.848"/>
+</kw>
+<status status="PASS" starttime="20240103 23:26:38.605" endtime="20240103 23:26:53.857"/>
+</kw>
+<kw name="Dado que acesse a home" library="homeSteps">
+<kw name="Acessa menu de venda" library="homePage">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Acessando a página de venda</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240103 23:26:53.868" endtime="20240103 23:26:53.877"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${vendas}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240103 23:26:53.882" level="INFO">Simulating Mouse Over on element 'xpath://*[@id="nav-xshop"]/a[1]'.</msg>
+<msg timestamp="20240103 23:26:54.301" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 23:26:54.303" level="FAIL">Element with locator 'xpath://*[@id="nav-xshop"]/a[1]' not found.</msg>
+<status status="FAIL" starttime="20240103 23:26:53.877" endtime="20240103 23:26:54.316"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${vendas}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240103 23:26:54.318" endtime="20240103 23:26:54.319"/>
+</kw>
+<status status="FAIL" starttime="20240103 23:26:53.866" endtime="20240103 23:26:54.321"/>
+</kw>
+<status status="FAIL" starttime="20240103 23:26:53.863" endtime="20240103 23:26:54.324"/>
+</kw>
+<kw name="Encerrar Sessão" library="baseSteps" type="TEARDOWN">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Encerrando Sessão</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240103 23:26:54.328" endtime="20240103 23:26:54.331"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240103 23:26:54.574" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240103 23:26:54.332" endtime="20240103 23:26:54.575"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20240103 23:26:54.575" endtime="20240103 23:26:54.906"/>
+</kw>
+<status status="PASS" starttime="20240103 23:26:54.327" endtime="20240103 23:26:54.907"/>
+</kw>
+<status status="FAIL" starttime="20240103 23:26:38.596" endtime="20240103 23:26:54.917">Element with locator 'xpath://*[@id="nav-xshop"]/a[1]' not found.</status>
+</test>
+<status status="FAIL" starttime="20240103 23:26:37.732" endtime="20240103 23:26:54.931"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="googleTestes">googleTestes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
